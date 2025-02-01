@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="SIT774 Team">
+    <meta name="description" content="Interactive Web Features">
+    <title>Interactive Web Features Tutorial</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="parallax.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark text-white">
+            <div class="container">
+                <div class="d-flex align-items-center w-100 flex-lg-row gap-4 ms-3">
+                    <a class="nav-link text-white" href="#parallax">Parallax Scrolling</a>
+                    <a class="nav-link text-white" href="#features">Customizable UI Features</a>
+                </div>
+            </div>
+        </nav>
+        <!-- HEADING SECTION-->
+        <section id="hero">
+            <div class="container-fluid bg-primary-subtle mb-3">
+                <div class="col-sm-8 mx-auto text-center py-4">
+                    <h1 class="display-4">Interactive Web Feature Tutorial</h1>
+                    <p class="lead">
+                        An easy beginner-friendly tutorial to implementing Multi-Layered Parallax Scrolling, On-Scroll
+                        Animation
+                        <br>
+                        and customizable UI features like Dark Mode Toggle and Font Size Adjuster!
+                        <br>
+                        Each page provides explanations for developers to implement these features
+                        easily.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Features-->
+            <h2 id="features">Customizable UI Features</h2>
+            <p>
+                Customizable UI features allow users to personalize their experience on a website or application,
+                tailoring the interface to their needs and preferences. These features improve accessibility, user
+                satisfaction, and overall usability. Specifically:
+
+            <ol>
+                <li>
+                    Dark Mode: This feature provides a darker color scheme for the UI, which can be easier on the eyes,
+                    especially in low-light environments. Many users prefer dark mode for aesthetic reasons or to reduce
+                    eye
+                    strain during extended use, particularly in the evening.
+                </li>
+                <li>
+                    Font Size Toggle: Allowing users to adjust font size is essential for accessibility. People with
+                    visual
+                    impairments or those who find text difficult to read can increase the font size to suit their
+                    preferences. This ensures that the website or app is usable by a broader range of users.
+                </li>
+                <li>
+                    Animations Toggle: Some users may find animations distracting, overwhelming, or even triggering in
+                    certain cases (e.g., motion sensitivity or epilepsy). Offering a toggle to turn off animations lets
+                    users customize their experience, making the interface more comfortable for them.
+                </li>
+            </ol>
+            <h2 id="features">On-Scroll Animation</h2>
+            <p>
+                On-scroll animations are important because they can significantly enhance user engagement by adding
+                visual interest and dynamism to a website.
+                They can draw attention to important elements, encourage exploration, and leave a positive impression on
+                visitors.
+            </p>
+
+            <a href="features.html">Click here to view Customizable UI features and On-Scroll Animation.</a>
+
+            </p>
+            <!-- Parallax-->
+            <h2 id="parallax">Parallax Effect</h2>
+            <p>
+                Parallax is when things closer to you seem to move faster than things farther away. Imagine looking out
+                a car window—nearby trees zoom by, but distant mountains barely seem to move. Websites use this idea to
+                make scrolling feel more interactive by moving different layers on the page at different speeds.
+            </p>
+
+            <div class="bgimg-1">
+                <h1 class="title" style="text-align:center;">Scroll Down!</h1>
+            </div>
+            <section class="mt-2">This is a simple parallax scrolling, which is just one fixed image in the background
+                where your
+                other divs can scroll past!</section>
+            <p>
+                <br><strong>Implementation Steps:</strong>
+            <ol>
+                <li>Define a div container with a specific height for the parallax background in your HTML file.</li>
+                <li>Apply CSS styles to create the parallax effect. The parallax scrolling effect is achieved using
+                    properties like
+                    <code>background-attachment: fixed;</code>. The other background properties are used to center and
+                    scale the image perfectly
+                </li>
+                <ul>
+                    <li><code>background-attachment: fixed; </code>ensures that the background stays fixed as the user
+                        scrolls.</li>
+                    <li><code>min-height: 400px; </code>sets a fixed height for the background container.</li>
+                    <li><code>background-size: cover; </code>makes sure the image covers the entire div.</li>
+                </ul>
+            </ol>
+
+            <div class="bgimg-3">
+                <h1 class="title" style="text-align:center;">Scroll Down!</h1>
+            </div>
+            <div class="bgimg-2">
+                <h1 class="title" style="text-align:center;">Scroll Down!</h1>
+            </div>
+
+            <h2 id="parallax" class="mt-2">Multi-Layer Parallax Effect</h2>
+            <p>
+                Multi-layer parallax scrolling involves multiple images moving at different speeds to enhance the depth
+                effect. This is achieved using the perspective and transform properties in CSS.
+            </p>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="div2">
+                <img src="Mountain.png" class="background">
+                <img src="Trees.png" class="foreground">
+            </div>
+            <section id="section_1">
+                This effect was originally used in early video games (like the classic Moon Patrol from 1982) to
+                create a sense of depth using multiple layers moving at different speeds. In modern web design, it's
+                used to create engaging, immersive experiences and guide users' attention through content in an
+                interesting way.
+                <br><br>
+                Parallax graphics can hold a user's attention and improve engagement, you can use parallax scrolling
+                to produce a one-page website where visitors can read an entire story about your product or brand
+                without navigating to multiple pages.
+            </section>
+
+            <section id="section_2">
+                <div class="container mt-4">
+                    <h2 id="parallax">Understanding the Code</h2>
+                    <p>
+                        Similar to the simple parallax scrolling, we must first define the structure in HTML and then
+                        apply CSS.
+                        <br><br>
+                        The key concepts that can be found in the <a href="https://github.com/vivada-lokugamage/SIT774-10.4HD">github</a> code:
+                    <ul>
+                        <li>Perspective - Defines how far objects appear in 3D space <code>perspective: 10px;</code>.
+                        </li>
+                        <li>Layering - Background and foreground images are placed inside a container <code>div2</code>
+                        </li>
+                        <li>Transformations - Each layer moves at different speeds using <code> translateZ</code>. Here
+                            background will move slower than foreground.</li>
+                        <li>Preserve 3D - Ensures that layers remain in a 3D space using
+                            <code>transform-style: preserve-3d;</code>.
+                        </li>
+                    </ul>
+                    How it works:
+                    <ul>
+                        <li>The <code>.wrapper</code> sets up a scrolling area with a 3D perspective.</li>
+                        <li>Inside <code>.div2</code>, two images (background and foreground) are placed.</li>
+                        <li>The background is moved further back <code>(translateZ(-10px) scale(2);)</code> , making it
+                            appear slower.</li>
+                        <li>The foreground is slightly closer <code>(translateZ(-5px) scale(1.5);)</code>, making it
+                            move faster.</li>
+                        <li>Both images are absolutely positioned to overlap and create the parallax effect.</li>
+                    </ul>
+
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="container-fluid text-center mt-4 p-2 bg-dark text-white">
+        <p>&copy; 2025 Interactive Web Features Wiki</p>
+    </footer>
+</body>
+
+</html>

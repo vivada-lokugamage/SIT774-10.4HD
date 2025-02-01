@@ -1,0 +1,155 @@
+:root{
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+.darkmode{
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: Poppins;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+}
+header, section{
+  padding: 20px min(70px, 7%);
+}
+section{
+  background-color: var(--base-variant);
+}
+p{
+  margin: 10px 0 20px 0;
+  color: var(--secondary-text);
+}
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cta-button{
+  background-color: var(--accent-color);
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+
+/* font size */
+.slider-container {
+  position: fixed;
+  top: 20px; /* Distance from top of viewport */
+  right: 80px; /* Distance from left of viewport */
+  z-index: 1000; /* Ensures it stays above other content */
+  font-size: 16px;
+    
+}
+/* Styling the box around the slider */
+.slider-box {
+  background-color: #eae7e7; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+  width: 200px; /* Fixed width for the slider box */
+  height: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+#font-size-slider {
+  width: 150;
+}
+
+
+/* SCROLL ANIMATION */
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+/* Dark mode styles for slider */
+.darkmode .slider-box {
+  background-color: #1c1f2b; /* Darker background in dark mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+.darkmode .slider-label {
+  color: var(--secondary-text); /* Light text color in dark mode */
+}
+
+.darkmode p, .darkmode h1, .darkmode h4 {
+  color: var(--text-color); /* Ensure text color changes in dark mode */
+}
+
+.darkmode .toggle-label{
+  background-color: white;
+  color: darkgrey;
+}
+
+footer p {
+  color: white;
+}
+
+/* Disable animations when .no-animations is applied */
+.no-animations * {
+  animation: none !important;
+  animation-timeline: none !important;
+}
